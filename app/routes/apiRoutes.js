@@ -4,17 +4,28 @@
 
 module.exports = function(app){
 
-    app.post("/api/survey", function(res, req) {
 
-    });
+  app.get("/api/friends", function(req, res) {
+    res.json(friendInfo);
+  });
+  
 
-    app.get("/api/survey", function(req, res) {
-        res.json(friendInfo);
-      });
+  app.post("/api/friends", function(req, res) {
+    console.log("req.body", req.body);  
+    var userInfo = req.body;
+    console.log( "userInfo", userInfo);
+      //friends.push(userInfo);
 
-    app.post("/api/clear", function() {
+        if (userInfo) {
+          res.json(true);
+        } else {
+          res.json(false);
+        }
 
-      });
+
+  });
+
+
 
 
 };
