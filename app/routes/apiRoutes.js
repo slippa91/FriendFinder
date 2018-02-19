@@ -1,26 +1,32 @@
 //LOAD DATA
 
-//var friendInfo = require("../data/friend.js");
+var friends = require("../data/friends");
 
 module.exports = function(app){
 
 
   app.get("/api/friends", function(req, res) {
-    res.json(friendInfo);
+    res.json(friends);
   });
   
 
   app.post("/api/friends", function(req, res) {
-    console.log("req.body", req.body);  
     var userInfo = req.body;
     console.log( "userInfo", userInfo);
-      //friends.push(userInfo);
+    //console.log("name", userInfo.name);
+    //console.log("scoresArray", userInfo);
+    // console.log("scoresArray0", userInfo.scores[0]);
+    // console.log("typeof", typeof(userInfo.scores[0]));
+
+    friends.push(userInfo);
 
         if (userInfo) {
           res.json(true);
         } else {
           res.json(false);
         }
+
+
 
 
   });
