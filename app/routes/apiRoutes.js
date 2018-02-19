@@ -1,6 +1,17 @@
 //LOAD DATA
 
-var friends = require("../data/friends");
+var friends = require("../data/friends.js");
+//console.log("friends", friends);
+for (key in friends) {
+  console.log("name", friends[key].name);
+  console.log("image", friends[key].image);
+  console.log("scores", friends[key].scores);
+  for (i = 0; i < friends[key].scores.length; i++) {
+    console.log("eachScore", (parseInt(friends[key].scores[i])));
+  }
+
+}
+
 
 module.exports = function(app){
 
