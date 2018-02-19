@@ -159,7 +159,7 @@
 
 
         <!-- Modal / ChosenFriend -->
-        <div class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal fade" id="chosenModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -172,7 +172,7 @@
 
                         <div id="chosenName"></div>
                         <br/>
-                        <div id="chosenImage"></div>
+                        <img id="chosenImage" src="" alt="Image of Your New Friend" style="width:300px; height:250px;"/>
 
                     </div>
                     <div class="modal-footer">
@@ -197,35 +197,43 @@
 
     <script type="text/javascript">
 
-        $("#surveySubmit").on("click", function(event) {
-        event.preventDefault();
-        var newUserInfo={
-            name: $("#name").val().trim(),
-            image: $("#imageLink").val().trim(),
-            scores: [
-            $("#q1").val(),
-            $("#q2").val(),
-            $("#q3").val(),
-            $("#q4").val(),
-            $("#q5").val(),
-            $("#q6").val(),
-            $("#q7").val(),
-            $("#q8").val(),
-            $("#q9").val(),
-            $("#q10").val()
-            ]
-        };
-        
-        console.log("nUI", newUserInfo);
+            $("#surveySubmit").on("click", function (event) {
+                event.preventDefault();
+                var newUserInfo = {
+                    name: $("#name").val().trim(),
+                    image: $("#imageLink").val().trim(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
 
-        $.post("/api/friends", newUserInfo, function(data) {
-            if (data) {
-                alert("You have a friend!");
-            } else {
-                alert("No friend for you");
-            }
-        });
-    });
+                console.log("nUI", newUserInfo);
+
+                $.post("/api/friends", newUserInfo, function (data) {
+
+                    if (data) {
+                        $("#chosenName").text(data.name);
+                        console.log(data.image);
+                        $("#chosenImage").attr("src", data.image);
+
+                        $("#chosenModal").modal("toggle");
+
+                    }
+
+                    else {
+                        alert("Please complete and submit your survey.");
+                    }
+                });
+            });
 
 
 

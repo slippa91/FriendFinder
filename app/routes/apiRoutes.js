@@ -40,22 +40,24 @@ module.exports = function(app){
       friends[key].netScore = totalDiff;
     };
 
-    console.log("friends", friends);
+    console.log("pre-sort", friends);
 
-    //friends.push(userInfo);
+      friends.sort(function (a, b) {
+          var netScoreA = new Number(a.netScore);
+          var netScoreB = new Number(b.netScore);
+          return netScoreA - netScoreB;
+      });
+
+
+    console.log("post-sort", friends);
+    console.log("chosen", friends[0]);
 
         if (userInfo) {
-          res.json(true);
+          res.json(friends[0]);
         } else {
           res.json(false);
         }
 
-
-
-
   });
-
-
-
 
 };
