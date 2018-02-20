@@ -23,8 +23,8 @@ module.exports = function(app){
 
   app.post("/api/friends", function(req, res) {
     var userInfo = req.body;
-    //console.log( "userInfo", userInfo);
-    //console.log("scores", userInfo['scores[]']);
+      console.log("userInfo", userInfo);
+      console.log("scores", userInfo['scores[]']);
     for (key in friends) {
       totalDiff = 0;
       console.log("key", key);

@@ -17,8 +17,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
     <!-- Chosen -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.2/chosen.jquery.min.js"></script>
+
+
 
 </head>
 
@@ -198,46 +200,61 @@
     <script type="text/javascript">
 
             $("#surveySubmit").on("click", function (event) {
-                event.preventDefault();
-                var newUserInfo = {
-                    name: $("#name").val().trim(),
-                    image: $("#imageLink").val().trim(),
-                    scores: [
-                        $("#q1").val(),
-                        $("#q2").val(),
-                        $("#q3").val(),
-                        $("#q4").val(),
-                        $("#q5").val(),
-                        $("#q6").val(),
-                        $("#q7").val(),
-                        $("#q8").val(),
-                        $("#q9").val(),
-                        $("#q10").val()
-                    ]
-                };
+                    event.preventDefault();
 
-                console.log("nUI", newUserInfo);
+                    function validateForm() {
+                        var isFilled = true;
+                        $(".form-control").each(function () {
+                            if ($(this).val() === "") {
+                                isFilled = false;
+                            }
+                        });
+                        $(".chosen-select").each(function () {
+                            if ($(this).val() === "") {
+                                isFilled = false;
+                            }
+                        });
+                        return isFilled;
+                    } //validate Form
 
-                $.post("/api/friends", newUserInfo, function (data) {
+                    if (validateForm()) {
 
-                    if (data) {
-                        $("#chosenName").text(data.name);
-                        console.log(data.image);
-                        $("#chosenImage").attr("src", data.image);
+                        var newUserInfo = {
+                            name: $("#name").val().trim(),
+                            image: $("#imageLink").val().trim(),
+                            scores: [
+                                $("#q1").val(),
+                                $("#q2").val(),
+                                $("#q3").val(),
+                                $("#q4").val(),
+                                $("#q5").val(),
+                                $("#q6").val(),
+                                $("#q7").val(),
+                                $("#q8").val(),
+                                $("#q9").val(),
+                                $("#q10").val()
+                            ]
+                        }; //newUser
 
-                        $("#chosenModal").modal("toggle");
+                        console.log("nUI", newUserInfo);
 
-                    }
+                        $.post("/api/friends", newUserInfo, function(data) {
 
-                    else {
-                        alert("Please complete and submit your survey.");
-                    }
-                });
-            });
+                            if (data) {
+                                $("#chosenName").text(data.name);
+                                console.log(data.image);
+                                $("#chosenImage").attr("src", data.image);
 
+                                $("#chosenModal").modal("toggle");
+                            } //data
 
+                        }); // post api
+                            
+                    } else {                                       
+                            alert("Please complete and submit your survey.");
+                        }; //else                         
 
-
+            }); //on-click
 
     </script>
 </body>
