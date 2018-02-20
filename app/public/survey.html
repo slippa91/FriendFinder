@@ -202,6 +202,17 @@
             $("#surveySubmit").on("click", function (event) {
                     event.preventDefault();
 
+/**
+ * @function validateForm
+ * isFilled boolean variable for form validation
+ * reviews for to ensure all text and select box questions are completed
+ * 
+ * @param {object} newUserInfo object containing user survey information;
+ * @param {string} name newUserInfo name
+ * @param {string} image newUserInfo image url
+ * @param {array} scores array of answers from 10 questions
+ * 
+ */
                     function validateForm() {
                         var isFilled = true;
                         $(".form-control").each(function () {

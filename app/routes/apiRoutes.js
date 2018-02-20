@@ -13,13 +13,26 @@ var friends = require("../data/friends.js");
 // };
 
 
+
 module.exports = function(app){
 
 
   app.get("/api/friends", function(req, res) {
     res.json(friends);
   });
-  
+
+
+  /**
+   * userInfo - a variable that takes in an object containing user info (name, image, survey scores)
+   * friends - array of objects exported from friends.js; objects will be compared against userInfo
+   * @param {string} name
+   * @param {string} image
+   * @param {array} scores
+   * eachScoreDiff - variable resulting from absolute value comparison between user score and a friend score for each question
+   * totalDiff - variable resulting from addition of eachScoreDiff as questions is evaluated across each object
+   * netScore - pushed to friends objects. equal to totalDiff as each object from friends is evaluated. Used as sorting criteria for compatibility.
+   * @return {object} the object from friends with the lowest netScore
+   */
 
   app.post("/api/friends", function(req, res) {
     var userInfo = req.body;
