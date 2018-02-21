@@ -3,6 +3,7 @@
  * scores  - used as the point of comparison
  * name & image - for chosen object, will be returned to the user
  */
+
 var friendsArray = [
     {
         name: 'Jordan', 
@@ -18,9 +19,13 @@ var friendsArray = [
     {
         name: 'Suzanne', 
         image: 'http://www.golfchannel.com/sites/golfchannel.prod.acquia-sites.com/files/6/8/1/%7B6812A411-7E06-43A7-ACBB-8598F134D4EA%7D448689.Jpeg',
-        scores: ['4', '4', '3', '4', '5', '2', '1', '2', '3', '3'  ]
+        scores: ['4', '4', '3', '1', '5', '2', '1', '1', '3', '3'  ]
+    }, 
+    {
+        name: 'Lydia', 
+        image: 'https://media.golfdigest.com/photos/55db63aa4759c60c0823dd71/master/pass/lydia-ko-canadian-pacific-womens-open-style.jpg',
+        scores: ['2', '3', '1', '2', '3', '1', '5', '4', '1', '2'  ]
     }
-
 
 ];
 

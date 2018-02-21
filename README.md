@@ -1,5 +1,5 @@
 # FriendFinder
-Title: FriendFinder
+Title: GolfBuddy
 Author: Susan Lippa
 Dates:  Jan 17-23, 2018 (week6)
 For:  Northwestern Coding Bootcamp
