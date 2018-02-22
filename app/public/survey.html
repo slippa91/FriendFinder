@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FriendFinderSurvey</title>
+    <title>FriendFinder Survey</title>
 
     <!-- Bootstrap CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -28,23 +28,24 @@
     <div class="container-fluid">
 
         <!-- Survey Header -->
-        <h1>FriendFinder Survey Questions</h1>
+        <h1>GolfBuddy Survey Questions</h1>
         <hr>
 
         <h2>About You</h2>
         <form>
             <label>Name (Required)</label>
-            <input type="text" class="form-control" id="name" placeholder="Name" required />
+            <input type="text" class="form-control" id="name" placeholder="Name" required>
             <br/>
             <label>Link to a Photo Image (Required)</label>
-            <input type="text" class="form-control" id="imageLink" placeholder="Image Link" required />
+            <input type="text" class="form-control" id="imageLink" placeholder="Image Link" rquired />
         </form>
 
         <hr>
+
         <!-- Survey Questions -->
 
         <h3>Question 1</h3>
-        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+        <h4>It is fine to arrive just as others in the group are teeing off.</h4>
         <select class="chosen-select" id="q1">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -55,7 +56,7 @@
         </select>
 
         <h3>Question 2</h3>
-        <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+        <h4>The most important feature of a driver is the color of the shaft.</h4>
         <select class="chosen-select" id="q2">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -66,7 +67,7 @@
         </select>
 
         <h3>Question 3</h3>
-        <h4>Your find it easy to stay relaxed and focused even when there is some pressure.</h4>
+        <h4>After a bad shot, you should throw the offending club into the nearest body of water.</h4>
         <select class="chosen-select" id="q3">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -77,7 +78,7 @@
         </select>
 
         <h3>Question 4</h3>
-        <h4>Your rarely do something just out of sheer curiosity.</h4>
+        <h4>Playing music so loud that everyone on the course can hear it is fun.</h4>
         <select class="chosen-select" id="q4">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -88,7 +89,7 @@
         </select>
 
         <h3>Question 5</h3>
-        <h4>People rarely upset you.</h4>
+        <h4>Cocktails and golf, a match made in heaven.</h4>
         <select class="chosen-select" id="q5">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -99,7 +100,7 @@
         </select>
 
         <h3>Question 6</h3>
-        <h4>It is often difficult for you to relate to other peoples feelings.</h4>
+        <h4>A round should last at least 5 hours.</h4>
         <select class="chosen-select" id="q6">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -110,7 +111,7 @@
         </select>
 
         <h3>Question 7</h3>
-        <h4>In a discussion, truth should be more important than people's sensitivities.</h4>
+        <h4>There is no reason to ever smile while golfing.</h4>
         <select class="chosen-select" id="q7">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -121,7 +122,7 @@
         </select>
 
         <h3>Question 8</h3>
-        <h4>Your rarely get carried away by fantasies and ideas.</h4>
+        <h4>Hecklers are always welcome.</h4>
         <select class="chosen-select" id="q8">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -132,7 +133,7 @@
         </select>
 
         <h3>Question 9</h3>
-        <h4>Your think that everyone's view should be respected regardless of whether they are supported by facts or not.</h4>
+        <h4>Shoes must match the belt.</h4>
         <select class="chosen-select" id="q9">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -143,7 +144,7 @@
         </select>
 
         <h3>Question 10</h3>
-        <h4>You feel more energetic after spending time with a group of people.</h4>
+        <h4>Colored golf balls are fun.</h4>
         <select class="chosen-select" id="q10">
             <option value></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -202,6 +203,17 @@
             $("#surveySubmit").on("click", function (event) {
                     event.preventDefault();
 
+/**
+ * @function validateForm
+ * isFilled boolean variable for form validation
+ * reviews for to ensure all text and select box questions are completed
+ * 
+ * @param {object} newUserInfo object containing user survey information;
+ * @param {string} name newUserInfo name
+ * @param {string} image newUserInfo image url
+ * @param {array} scores array of answers from 10 questions
+ * 
+ */
                     function validateForm() {
                         var isFilled = true;
                         $(".form-control").each(function () {
