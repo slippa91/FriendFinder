@@ -1,4 +1,4 @@
-# FriendFinder
+# GolfBuddy
 Title: GolfBuddy
 Author: Susan Lippa
 Dates:  Jan 17-23, 2018 (week6)
