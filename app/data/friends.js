@@ -25,7 +25,14 @@ var friendsArray = [
         name: 'Lydia', 
         image: 'https://media.golfdigest.com/photos/55db63aa4759c60c0823dd71/master/pass/lydia-ko-canadian-pacific-womens-open-style.jpg',
         scores: ['2', '3', '1', '2', '3', '1', '5', '4', '1', '2'  ]
+    },
+    {
+        name: 'Paula', 
+        image: 'https://41.media.tumblr.com/69c27eb3cb36fa95ae47ccc358b5c77a/tumblr_nn7tmnKOJS1qem99po1_1280.jpg',
+        scores: ['5', '3', '5', '5', '2', '1', '2', '5', '5', '2'  ]
     }
+    
+    
 
 ];
 
