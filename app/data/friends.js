@@ -18,7 +18,7 @@ var friendsArray = [
     },
     {
         name: 'Suzanne', 
-        image: 'http://www.golfchannel.com/sites/golfchannel.prod.acquia-sites.com/files/6/8/1/%7B6812A411-7E06-43A7-ACBB-8598F134D4EA%7D448689.Jpeg',
+        image: 'https://www.golfchannel.com/sites/golfchannel.prod.acquia-sites.com/files/6/8/1/%7B6812A411-7E06-43A7-ACBB-8598F134D4EA%7D448689.Jpeg',
         scores: ['4', '4', '3', '1', '5', '2', '1', '1', '3', '3'  ]
     }, 
     {
@@ -33,7 +33,7 @@ var friendsArray = [
     }, 
     {
         name: 'Lexi', 
-        image: 'http://assets.nydailynews.com/polopoly_fs/1.2171235.1427994898!/img/httpImage/image.jpg_gen/derivatives/article_750/461934071xx00032-u-s-women.jpg',
+        image: 'https://assets.nydailynews.com/polopoly_fs/1.2171235.1427994898!/img/httpImage/image.jpg_gen/derivatives/article_750/461934071xx00032-u-s-women.jpg',
         scores: ['1', '2', '4', '3', '4', '3', '1', '2', '4', '4'  ]
     }
 
