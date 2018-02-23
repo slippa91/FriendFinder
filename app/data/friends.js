@@ -30,8 +30,13 @@ var friendsArray = [
         name: 'Paula', 
         image: 'https://41.media.tumblr.com/69c27eb3cb36fa95ae47ccc358b5c77a/tumblr_nn7tmnKOJS1qem99po1_1280.jpg',
         scores: ['5', '3', '5', '5', '2', '1', '2', '5', '5', '2'  ]
+    }, 
+    {
+        name: 'Lexi', 
+        image: 'http://assets.nydailynews.com/polopoly_fs/1.2171235.1427994898!/img/httpImage/image.jpg_gen/derivatives/article_750/461934071xx00032-u-s-women.jpg',
+        scores: ['1', '2', '4', '3', '4', '3', '1', '2', '4', '4'  ]
     }
-    
+
     
 
 ];

@@ -28,7 +28,7 @@ module.exports = function(app){
     for (key in friends) {
       totalDiff = 0;
       for (i = 0; i < userInfo['scores[]'].length; i++) {
-      var eachScoreDiff =  Math.abs((parseInt(userInfo['scores[]'][i])) - (parseInt(friends[key].scores[i])));
+      var eachScoreDiff =  Math.abs((userInfo['scores[]'][i]) - (friends[key].scores[i]));
       totalDiff = totalDiff + eachScoreDiff;
       }
       friends[key].netScore = totalDiff;

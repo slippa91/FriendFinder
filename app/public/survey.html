@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FriendFinder Survey</title>
+    <title>GolfBuddy Survey</title>
 
     <!-- Bootstrap CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -169,7 +169,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <h4 class="modal-title">Your new friend is...</h4>
+                        <h4 class="modal-title">Your new GolfBuddy is...</h4>
                     </div>
                     <div class="modal-body">
 
@@ -181,15 +181,15 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
-                </div> <!-- /.modal-content -->
-            </div> <!-- /.modal-dialog -->
-        </div> <!-- /.modal -->
+                </div> 
+            </div> 
+        </div> 
 
 
         <!-- Footer -->
         <hr>
         <footer>
-          <p><a href="/api/friends">API Friends List</a></p>
+          <p><a href="/api/friends">API GolfBuddies List</a></p>
 
         </footer>
     
@@ -227,7 +227,7 @@
                             }
                         });
                         return isFilled;
-                    } //validate Form
+                    } 
 
                     if (validateForm()) {
 
@@ -246,7 +246,7 @@
                                 $("#q9").val(),
                                 $("#q10").val()
                             ]
-                        }; //newUser
+                        }; 
 
                         console.log("nUI", newUserInfo);
 
@@ -258,15 +258,15 @@
                                 $("#chosenImage").attr("src", data.image);
 
                                 $("#chosenModal").modal("toggle");
-                            } //data
+                            } 
 
-                        }); // post api
+                        }); 
                             
                     } else {                                       
                             alert("Please complete and submit your survey.");
-                        }; //else                         
+                        };                         
 
-            }); //on-click
+            });
 
     </script>
 </body>
