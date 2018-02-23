@@ -33,7 +33,7 @@ var friendsArray = [
     }, 
     {
         name: 'Lexi', 
-        image: 'https://assets.nydailynews.com/polopoly_fs/1.2171235.1427994898!/img/httpImage/image.jpg_gen/derivatives/article_750/461934071xx00032-u-s-women.jpg',
+        image: 'https://www.teamusa.org/-/media/TeamUSA/Golf/Thompson_Lexi/thompson_lexi_07152017_800x375.jpg',
         scores: ['1', '2', '4', '3', '4', '3', '1', '2', '4', '4'  ]
     }
 
