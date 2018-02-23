@@ -13,4 +13,4 @@ The user is asked for a response to 10 (somewhat silly) golf related survey ques
 
 Purpose:
 
-Practice, practice, practice. The focus of this project was the use of Node.js, Express.js and the creation of the relevant html & API routes. 
+Practice, practice, practice. The focus of this project was the use of Node.js, Express.js and the creation of the relevant html & API routes.
